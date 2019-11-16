@@ -7,13 +7,20 @@
       <div class="col">
         <router-link to="/leafletMap">Map</router-link>
       </div>
-      <router-view></router-view>
+    </div>
+    <div class="row justify-center mt-5">
+      <div class="col">
+        <router-view :msg="hello"></router-view>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  data: _ => ({
+    hello: 'Holly, Vue!'
+  })
 }
 </script>
 
