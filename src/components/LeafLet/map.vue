@@ -9,7 +9,7 @@
         :zoom="zoom"
         @click="hMarkerClick"
       >
-        <l-tile-layer :url="url"></l-tile-layer>
+        <l-tile-layer :url="urlOSM"></l-tile-layer>
         <l-marker :lat-lng="markerLatLng">
           <l-popup>Hello!!!</l-popup>
         </l-marker>
@@ -35,7 +35,8 @@ export default {
   },
   data: _ => ({
     zoom: 13,
-    url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+    urlOSM: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+    urlYandex: 'http://vec{s}.maps.yandex.net/tiles?l=map&v=4.55.2&z={z}&x={x}&y={y}&scale=2&lang=ru_RU',
     center: [55.753745192950454, 37.61985898017884],
     markerLatLng: [55.753745192950454, 37.61985898017884]
   }),
