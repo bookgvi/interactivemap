@@ -6,6 +6,7 @@ Vue.use(VueRouter)
 export default new VueRouter({
   mode: 'history',
   routes: [
-    { path: '/hello', component: () => import('../components/HelloWorld.vue') }
+    { path: '/hello', component: () => import('../components/HelloWorld.vue') },
+    { path: '/leafletMap', components: () => import('../components/LeafLet') }
   ]
 })

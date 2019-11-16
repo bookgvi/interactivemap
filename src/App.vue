@@ -1,7 +1,14 @@
 <template>
-  <div id="app">
-    <router-link to="/hello">HelloWorld</router-link>
-    <router-view></router-view>
+  <div id="app" class="container">
+    <div class="row">
+      <div class="col">
+        <router-link to="/hello">HelloWorld</router-link>
+      </div>
+      <div class="col">
+        <router-link to="/leafletMap">Map</router-link>
+      </div>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
