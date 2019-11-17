@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import { LMap, LTileLayer, LMarker, LPopup } from 'vue2-leaflet'
 export default {
   props: {
@@ -42,14 +43,17 @@ export default {
   }),
   mounted () {
     this.$nextTick(_ => {
-      console.log(this.$refs.map.mapObject)
+      // console.log(this.$refs.map.mapObject)
       // TODO --> some methods will be here
       // this.$refs.map.mapObject.options = [35, 75]
     })
   },
   methods: {
     hMarkerClick (e) {
-      console.log(e)
+      this.$nextTick(_ => {
+        Vue.set(this.markerLatLng, 0, e.latlng.lat)
+        Vue.set(this.markerLatLng, 1, e.latlng.lng)
+      })
     }
   }
 }
